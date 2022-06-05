@@ -47,19 +47,19 @@ jobs:
 
     - name: Upload
       env: 
-        ACCESS_TOKEN: ${{  secrets.REPO_TOKEN  }}
+        ACCESS_TOKEN: ${{  secrets.ACCESS_TOKEN  }}
       run: |
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
         [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${{  secrets.REPO_TOKEN  }}@github.com/HiJwm/my-openwrt-packages" HEAD:${{matrix.target}}    
+        git push --quiet "https://${{  secrets.ACCESS_TOKEN  }}@github.com/HiJwm/my-openwrt-packages" HEAD:${{matrix.target}}    
         
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2.0.2
       with:
-        token: ${{  secrets.REPO_TOKEN  }}
+        token: ${{  secrets.ACCESS_TOKEN  }}
         repository: kenzok8/openwrt-packages
         retain_days: 1
         keep_minimum_runs: 1
