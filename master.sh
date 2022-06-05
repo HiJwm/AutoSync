@@ -20,7 +20,8 @@ git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
 git clone --depth 1 https://github.com/tty228/luci-app-serverchan
 git clone --depth 1 https://github.com/ntlf9t/luci-app-easymesh
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot
-git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git
+
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
