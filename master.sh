@@ -28,9 +28,9 @@ git clone --depth 1 https://github.com/jefferymvp/luci-app-koolproxyR
 git clone --depth 1 https://github.com/hubbylei/luci-app-clash
 git clone --depth 1 https://github.com/QiuSimons/openwrt-mos && mv -n openwrt-mos/*mosdns ./ ; rm -rf openwrt-mos
 git clone --depth 1 https://github.com/kenzok8/luci-theme-ifit ifit && mv -n ifit/luci-theme-ifit ./;rm -rf ifit
-git clone --depth 1 https://github.com/kenzok78/luci-theme-argonne
-git clone --depth 1 https://github.com/kenzok78/luci-app-argonne-config
-git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
+#git clone --depth 1 https://github.com/kenzok78/luci-theme-argonne
+#git clone --depth 1 https://github.com/kenzok78/luci-app-argonne-config
+#git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns
 git clone --depth 1 https://github.com/Huangjoe123/luci-app-eqos
 git clone --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
@@ -56,8 +56,8 @@ svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
 
 
 svn export https://github.com/kenzok8/litte/trunk/luci-theme-atmaterial_new
-svn export https://github.com/kenzok8/litte/trunk/luci-theme-mcat
-svn export https://github.com/kenzok8/litte/trunk/luci-theme-tomato
+#svn export https://github.com/kenzok8/litte/trunk/luci-theme-mcat
+#svn export https://github.com/kenzok8/litte/trunk/luci-theme-tomato
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/fw876/helloworld/trunk/naiveproxy
