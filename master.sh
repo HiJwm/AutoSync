@@ -21,7 +21,6 @@ git clone --depth 1 https://github.com/tty228/luci-app-serverchan
 git clone --depth 1 https://github.com/ntlf9t/luci-app-easymesh
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
-
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
@@ -73,7 +72,7 @@ svn export https://github.com/coolsnowwolf/packages/trunk/multimedia/UnblockNete
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome
 svn export https://github.com/281677160/openwrt-package/trunk/luci-theme-opentopd
-
+git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 ./luci-theme-argon-18.06
 
 rm -rf ./*/.git & rm -rf ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
