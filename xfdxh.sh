@@ -71,7 +71,7 @@ git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns/
 git clone https://github.com/sbwml/openwrt-alist ./op-alist/
 rm -rf ./op-alist/.github
 
-rm -rf ./jerrykuku/lua-maxminddb/.github
+rm -rf ./jerrykuku/.github
         
 
 sed -i \
