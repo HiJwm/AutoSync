@@ -1,10 +1,10 @@
 
-name: small
+name: xfdxh
 
 on:
   push:
     paths:
-      - '.github/workflows/small.yml'
+      - '.github/workflows/xfdxh.yml'
   schedule:
     - cron: 0 */48 * * *
   watch:
@@ -16,7 +16,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     runs-on: Ubuntu-20.04
 
-    name: Update small
+    name: Update xfdxh 
     strategy:
       fail-fast: false
       matrix:
@@ -38,7 +38,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x small.sh
-        git clone -b master https://github.com/kenzok8/small.git ${{matrix.target}}
+        git clone -b master https://github.com/HiJwm/openwrt-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
@@ -53,4 +53,4 @@ jobs:
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/kenzok8/small.git" HEAD:${{matrix.target}}
+        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/HiJwm/openwrt-packages.git" HEAD:${{matrix.target}}
