@@ -36,19 +36,19 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x ${{matrix.target}}.sh
-        ##git clone -b master github.com/HiJwm/openwrt-packages.git ${{matrix.target}}
+        chmod +x xfdxh.sh
+        git clone -b master github.com/HiJwm/openwrt-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "diy"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/${{matrix.target}}.sh
-        $GITHUB_WORKSPACE/diy/Modify.sh
+        $GITHUB_WORKSPACE/xfdxh.sh
+    
     - name: Upload
       env: 
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
+        ##[ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
@@ -58,6 +58,6 @@ jobs:
       uses: Mattraks/delete-workflow-runs@v2.0.2
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
-        repository: kenzok8/openwrt-packages
+        repository: HiJwm/openwrt-packages
         retain_days: 1
         keep_minimum_runs: 1
