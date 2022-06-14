@@ -42,7 +42,7 @@ jobs:
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/small.sh
+        $GITHUB_WORKSPACE/xhdxh.sh
         
     - name: Upload
       env: 
