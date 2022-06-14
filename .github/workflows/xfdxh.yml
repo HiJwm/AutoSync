@@ -49,7 +49,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        cp https://raw.githubusercontent.com/xiangfeidexiaohuo/openwrt-packages/main/README.md $GITHUB_WORKSPACE/${{matrix.target}}
+        cp https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
