@@ -37,7 +37,7 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x small.sh
+        chmod +x xfdxh.sh
         git clone -b master https://github.com/HiJwm/openwrt-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
