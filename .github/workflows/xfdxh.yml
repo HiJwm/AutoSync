@@ -37,7 +37,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x xfdxh.sh
-        git clone -b master github.com/HiJwm/openwrt-packages.git ${{matrix.target}}
+        git clone -b master github.com/xiangfeidexiaohuo/openwrt-packages ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "diy"` >/dev/null 2>&1
