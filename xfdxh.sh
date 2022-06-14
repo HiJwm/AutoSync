@@ -15,7 +15,6 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-rm -rf jerrykuku/lua-maxminddb 
 git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
 git clone https://github.com/tty228/luci-app-serverchan ./luci-app-serverchan
 git clone https://github.com/ntlf9t/luci-app-easymesh ./luci-app-easymesh
@@ -71,6 +70,8 @@ svn export https://github.com/coolsnowwolf/packages/trunk/net/socat ./op-socat/s
 git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns/
 git clone https://github.com/sbwml/openwrt-alist ./op-alist/
 rm -rf ./op-alist/.github
+
+rm -rf ./jerrykuku/lua-maxminddb/.github
         
 
 sed -i \
